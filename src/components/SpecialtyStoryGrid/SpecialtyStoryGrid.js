@@ -62,6 +62,10 @@ const Wrapper = styled.div`
 
 const MarketsSection = styled.section`
   grid-area: markets-section;
+
+  @media ${QUERIES.laptopAndUp} {
+    padding-right: var(--laptop-grid-spacing);
+  }
 `;
 
 const MarketCards = styled.div`
@@ -74,28 +78,27 @@ const MarketCards = styled.div`
   }
   @media ${QUERIES.laptopAndUp} {
     grid-template-columns: repeat(3, 1fr);
-
-    padding-right: var(--laptop-grid-spacing);
   }
 `;
 
 const SportsSection = styled.section`
   grid-area: sports-section;
-  overflow: hidden;
+  overflow: auto;
+
+  @media ${QUERIES.laptopAndUp} {
+    padding-left: var(--laptop-grid-spacing);
+    border-left: 1px solid var(--color-gray-300);
+  }
 `;
 
 const SportsStories = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
+  overflow: auto;
 
   @media ${QUERIES.tabletAndUp} {
     display: flex;
-  }
-
-  @media ${QUERIES.laptopAndUp} {
-    padding-left: var(--laptop-grid-spacing);
-    border-left: 1px solid var(--color-gray-300);
   }
 `;
 

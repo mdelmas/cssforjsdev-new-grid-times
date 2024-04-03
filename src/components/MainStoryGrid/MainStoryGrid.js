@@ -54,6 +54,8 @@ const Wrapper = styled.div`
 
   margin-bottom: 48px;
 
+  justify-content: start;
+
   @media ${QUERIES.tabletAndUp} {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
